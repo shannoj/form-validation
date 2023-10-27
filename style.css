@@ -33,3 +33,19 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.input{
+    border: 2px solid grey;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid green;
+}
+
+input:focus{
+    outline: none;
+}
