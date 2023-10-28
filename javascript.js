@@ -4,6 +4,46 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm-password');
 
+zip.addEventListener('input', function(){
+    if (country.value.toLowerCase() == 'united states' || country.value.toLowerCase() == 'us'){
+        if(zip.value.length != 5){
+            zip.setCustomValidity('Zip code for United States must be 5 digits')
+            zip.style.borderColor = 'red';
+        } else {
+            zip.setCustomValidity('');
+            zip.style.borderColor = 'green';
+        }
+    }
+
+    if (zip.value === ''){
+        zip.setCustomValidity('A zip code is required');
+        country.style.borderColor = 'red';
+    } else {
+        zip.setCustomValidity('');
+        zip.style.borderColor = 'green';
+    }
+});
+
+country.addEventListener('input', function(){
+    if (country.value.toLowerCase() == 'united states' || country.value.toLowerCase() == 'us'){
+        if(zip.value.length != 5){
+            zip.setCustomValidity('Zip code for United States must be 5 digits')
+            zip.style.borderColor = 'red';
+        } else {
+            zip.setCustomValidity('');
+            zip.style.borderColor = 'green';
+        }
+    }
+
+    if (country.value === ''){
+        country.setCustomValidity('A country is required');
+        country.style.borderColor = 'red';
+    } else {
+        country.setCustomValidity('');
+        country.style.borderColor = 'green';
+    }
+});
+
 email.addEventListener("input", function() {
     if (email.validity.typeMismatch || email.value.length < 1) {
       email.setCustomValidity("I am expecting an email address!");

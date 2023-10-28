@@ -34,7 +34,11 @@
     flex-direction: column;
 }
 
-.input{
+input{
+    border: 2px solid grey;
+}
+
+input:blank{
     border: 2px solid grey;
 }
 
